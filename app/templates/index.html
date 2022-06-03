@@ -1,57 +1,40 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block head %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="Personal Portfolio">
+    <meta property="og:description" content="My Personal Portfolio">
+    <meta property="og:url" content="{{ url }}">
 
-{% endblock %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 
-{% block body %}
-<div class="introduction">
-    <div class="introduction-text">
-        <p>hello, nice to meet you</p>
-        <h1>I'm {{header_info.name}}</h1>
-    </div>
+    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
+    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
+    <title>{{ title }}</title>
+</head>
 
-    <div class="introduction-image">
-
-        <img src="/static/img/logo.jpg" alt="">
-    </div>
-
-</div>
-
-<div class="about-yourself box-border">
-    <div class="about-yourself-title">
-        <h3>Let me tell you a little bit about myself...</h3>
-    </div>
-    <div class="about-yourself-description1">
-        <p>{{about_info.aboutDescription}}</p>
-    </div>
-
-</div>
-
-<div class="grid-layout box-border" id="education">
-    <div class="education-header">
-        <h3>Where do I attend school?</h3>
-    </div>
-    <div class="education-info">
-        <div class="education-description">
-            <p>{{about_info.educationDescription}}</p>
+<body>
+    <header class="nav-bar">
+        <div class="nav-content">
+            <a href="/">
+                <div class="nav-logo">
+                    <img src="./static/img/logo.svg" />
+                </div>
+            </a>
         </div>
-        <div class="college">
-            <img src={{images.college}} alt="">
-        </div>
-    </div>
+    </header>
 
-</div>
-<div class="grid-layout box-border" id="work-experience">
-    <div class="work-experience-header">
-        <h3>My Professional Experiences</h3>
+    <div class="profile">
+        <div id="profile-picture" class="profile-picture">
+            <img src="./static/img/logo.jpg">
+        </div>
+        <h1>{{ title }}</h1>
     </div>
-    {% for experience in workExperience %}
-    <div class="work-experience">
-        <h4>{{experience.title}}</h4>
-        <img src="{{experience.img}}" alt="">
-        <p>{{experience.description}}</p>
-    </div>
-    {% endfor %}
-</div>
-{% endblock %}
+</body>
+</html>

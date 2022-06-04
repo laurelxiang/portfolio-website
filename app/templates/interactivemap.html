@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a51cdbff26ab1da1ea5c59d80821925a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_a51cdbff26ab1da1ea5c59d80821925a" ></div>
+        
+</body>
+<script>    
+    
+            var map_a51cdbff26ab1da1ea5c59d80821925a = L.map(
+                "map_a51cdbff26ab1da1ea5c59d80821925a",
+                {
+                    center: [20.0, 16.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: false,
+                    preferCanvas: false,
+                    scrollWheelZoom: false,
+                    dragging: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f6f45ffb413d11d0d26c606794fdbb48 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a51cdbff26ab1da1ea5c59d80821925a);
+        
+    
+            var marker_b6d6114040e41a2d86c41011274128b2 = L.marker(
+                [41.3874, 2.1686],
+                {}
+            ).addTo(map_a51cdbff26ab1da1ea5c59d80821925a);
+        
+    
+            marker_b6d6114040e41a2d86c41011274128b2.bindTooltip(
+                `<div>
+                     Barcelona, Spain
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2e712838d5fadb58459b34ce6ac362f8 = L.marker(
+                [48.8566, 2.3522],
+                {}
+            ).addTo(map_a51cdbff26ab1da1ea5c59d80821925a);
+        
+    
+            marker_2e712838d5fadb58459b34ce6ac362f8.bindTooltip(
+                `<div>
+                     Paris, France
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_97cc87b3306c9a4eb88368c0b882a3ad = L.marker(
+                [34.0522, -118.2437],
+                {}
+            ).addTo(map_a51cdbff26ab1da1ea5c59d80821925a);
+        
+    
+            marker_97cc87b3306c9a4eb88368c0b882a3ad.bindTooltip(
+                `<div>
+                     Los Angeles, California
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_98729c4089ab62a4f01e1f585b20114b = L.marker(
+                [51.2538, -85.3232],
+                {}
+            ).addTo(map_a51cdbff26ab1da1ea5c59d80821925a);
+        
+    
+            marker_98729c4089ab62a4f01e1f585b20114b.bindTooltip(
+                `<div>
+                     Ontario, Canada
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_261f0df994003dc47bb79f80ab6f319d = L.marker(
+                [23.1291, 113.2644],
+                {}
+            ).addTo(map_a51cdbff26ab1da1ea5c59d80821925a);
+        
+    
+            marker_261f0df994003dc47bb79f80ab6f319d.bindTooltip(
+                `<div>
+                     Guangzhou, China
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_86a81a8de34152d4fab2fa56087890b2 = L.marker(
+                [25.7617, -80.1918],
+                {}
+            ).addTo(map_a51cdbff26ab1da1ea5c59d80821925a);
+        
+    
+            marker_86a81a8de34152d4fab2fa56087890b2.bindTooltip(
+                `<div>
+                     Miami, Florida
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>

@@ -1,4 +1,5 @@
 import os
+from turtle import fillcolor
 from flask import Flask, render_template, request, url_for
 from dotenv import load_dotenv
 from app.data import header_info, about_info, images, workExperience
@@ -16,8 +17,8 @@ def index():
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), header_info=header_info, about_info=about_info, images=images, workExperience=workExperience)
 
 
-@app.route("/interactivemap")
-def interactivemap():
+@app.route('/map')
+def map():
     folium_map = folium.Map(
         location=[20, 16],
         zoom_start=2,
@@ -32,13 +33,14 @@ def interactivemap():
             tooltip=place['City'] + ", " + place['Country']
         ).add_to(folium_map)
 
-    return folium_map._repr_html_()
-
-
-@app.route('/map')
-def map():
+    folium_map.save('app/templates/interactivemap.html')
 
     return render_template('map.html')
+
+
+@app.route('/interactivemap')
+def interactivemap():
+    return render_template('interactivemap.html')
 
 
 @app.context_processor

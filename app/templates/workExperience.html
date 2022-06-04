@@ -1,0 +1,12 @@
+<div class="grid-layout box-border" id="work-experience">
+    <div class="work-experience-header">
+        <h3>My Professional Experiences</h3>
+    </div>
+    {% for experience in workExperience %}
+    <div class="work-experience">
+        <h4>{{experience.title}}</h4>
+        <img src="{{experience.img}}" alt="">
+        <p>{{experience.description}}</p>
+    </div>
+    {% endfor %}
+</div>

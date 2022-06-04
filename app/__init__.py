@@ -2,30 +2,61 @@ import os
 from flask import Flask, render_template, request, url_for
 from dotenv import load_dotenv
 from app.data import header_info, about_info, images, workExperience
+import folium
+import pandas as pd
 load_dotenv()
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
+
+    # folium_map = folium.Map(location=(6.1753924, 106.8271528))
+    # folium_map.save('templates/interactivemap.html')
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), header_info=header_info, about_info=about_info, images=images, workExperience=workExperience)
+
+
+@app.route("/interactivemap")
+def interactivemap():
+    folium_map = folium.Map(
+        location=[20, 16],
+        zoom_start=2,
+        zoom_control=False,
+        scrollWheelZoom=False,
+        dragging=False
+    )
+    places_visited = pd.read_csv('app/places.csv')
+    for _, place in places_visited.iterrows():
+        folium.Marker(
+            location=[place['latitude'], place['longitude']],
+            tooltip=place['City'] + ", " + place['Country']
+        ).add_to(folium_map)
+
+    return folium_map._repr_html_()
+
 
 @app.route('/map')
 def map():
+
     return render_template('map.html')
+
 
 @app.context_processor
 def override_url_for():
     return dict(url_for=dated_url_for)
+
 
 def dated_url_for(endpoint, **values):
     if endpoint == 'static':
         filename = values.get('filename', None)
         if filename:
             file_path = os.path.join(app.root_path,
-                                 endpoint, filename)
+                                     endpoint, filename)
             values['q'] = int(os.stat(file_path).st_mtime)
     return url_for(endpoint, **values)
 
+
 if __name__ == "__main__":
     app.run(debug=True)
+
+# %%

@@ -1,11 +1,18 @@
-p, h1, h2, h3, h4, h5, h6, button {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
     font-family: "Roboto", serif;
 }
 
 body {
     background-color: #f5f5f9;
     background-size: cover;
-    width: auto; 
+    width: auto;
     overflow-x: hidden;
     font-family: "Roboto", serif;
     margin: 0px;
@@ -41,57 +48,94 @@ body {
     width: 200px;
 }
 
-.nav-content nav {
-    display: block;
-    width: 100%;
-    text-align: right;
-    padding-top: 0px;
-    padding-right: 0px;
+@media only screen and (max-width: 1000px) {
+    .grid-layout {
+        display: block;
+        padding: 1rem 0;
+    }
+
 }
 
-.profile {
-    background-color: #1d539f !important;
+.college {
+    margin-top: 1rem;
+    margin-left: none;
+    align-self: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .education-info {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .college {
+        margin-top: 1rem;
+        margin-left: none;
+        align-self: center;
+    }
+
+}
+
+.education-description {
+    padding-right: 5rem;
+}
+
+/* Professional Experience */
+#work-experience {
+    height: 100%;
+    grid-template-columns: repeat(2, 50%);
+
+}
+
+#work-experience img {
+    width: 200px;
+}
+
+.work-experience-header {
+    grid-column: span 2;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: 3rem;
+}
+
+.work-experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: fit-content;
+    margin: 0 6rem 3rem 6rem;
+}
+
+.work-experience img {
+    align-self: center;
+}
+
+/* footer */
+.copyright {
     text-align: center;
-    height: 320px;
-    margin-bottom: 50px;
+    margin: 3rem;
 }
 
-.profile h1 {
-        font-size: 50px;
-        font-weight: 700;
-        color: white;
+/* Map Page */
+#map-header {
+    text-align: center;
+    padding: 3rem 5rem 0 5rem;
+    font-size: 3rem;
+    color: #B56576;
 }
 
-.profile img {
-        border-radius: 50%;
-        max-width: 100%;
-        max-height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;        
-        padding: 20px;
+#map-description {
+    text-align: center;
+    font-size: 1.3rem;
+    font-style: italic;
 }
 
-.profile .profile-picture {
-    margin-bottom: 30px;
-    height: 200px;
+.map-container {
+    padding: 2rem 0;
 }
 
-.banner {
-    padding: 20px 0px 50px 0px;
-    height: 150px;
-    background-color: #1d539f;
-}
-
-.banner .logo {
-    max-width:180px;
-    max-height:60px;
-    width: auto;
-    height: auto;
-}
-
-.banner .title {
-    color: white;
-    font-size: 50px;
-    font-weight: 700;
+.map {
+    margin: auto;
+    border: 3px solid rgb(40, 40, 40);
 }

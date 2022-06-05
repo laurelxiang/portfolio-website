@@ -4,7 +4,10 @@
     </div>
     {% for experience in workExperience %}
     <div class="work-experience">
-        <h4>{{experience.title}}</h4>
+        <div class="work-experience-title">
+            <h4>{{experience.title}}</h4>
+            <p>{{experience.date}}</p>
+        </div>
         <img src="{{experience.img}}" alt="">
         <p>{{experience.description}}</p>
     </div>

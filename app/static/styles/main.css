@@ -183,6 +183,16 @@ p {
     margin: 0 6rem 3rem 6rem;
 }
 
+.work-experience-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-experience-title>p {
+    font-style: italic;
+    size: 0.8rem;
+}
+
 .work-experience img {
     align-self: center;
 }

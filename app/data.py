@@ -4,7 +4,7 @@ header_info = {
 }
 
 about_info = {
-    "aboutDescription": "I was born and raised in Brooklyn, New York. I enjoy working on web development projects and I hope to learn more through my internships and other experiences. I also enjoy programming and designing mobile applications.",
+    "aboutDescription": "I am an aspiring Web Developer and UX/UI Designer. A little background information... I was born and raised in Brooklyn, New York. I enjoy working on web development projects and I hope to learn more through my internships and other experiences. I also enjoy programming and designing mobile applications.",
     "educationDescription": "I am attending Stony Brook University as Class of 2024. I am currently majoring in Computer Science with\
                 a plan to specialize in Human-Computer Interaction. Stony Brook University is located in Long Island,\
                 New York. On campus, I am on Executive Board for Philippine United Student Organization with a position\
@@ -25,8 +25,9 @@ workExperience = [
     },
     {
         "title": "HPC Student Assistant",
-        "description": "I worked on Stony Brook's campus as a High Performance Computing Student Assistant. ",
-        "img": "/static/img/sbuiacs.jpeg"
+        "description": "I worked on Stony Brook's campus as a High Performance Computing Student Assistant. Through this job, I was able to learn Linux commands and functionality. I also gained knowledge on how servers and nodes worked. ",
+        "img": "/static/img/sbuiacs.jpeg",
+        "date": "January 2022 - Present"
     }
 
 ]

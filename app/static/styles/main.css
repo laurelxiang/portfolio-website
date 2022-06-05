@@ -125,11 +125,6 @@ p {
     margin-bottom: 3rem;
 }
 
-.education-info {
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
 .college {
     margin-top: 1rem;
     margin-left: none;

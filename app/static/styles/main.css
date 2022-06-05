@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@500&family=Parisienne&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
-
-* {
-    margin: 0;
-    display: block;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+    font-family: "Roboto", serif;
 }
 
 body {
-    background-color: white;
+    background-color: #f5f5f9;
     background-size: cover;
     width: auto;
     overflow-x: hidden;
@@ -15,87 +18,34 @@ body {
     margin: 0px;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Eczar',
-        serif;
+.nav-bar {
+    width: 100%;
+    display: inline-block;
+    background-color: #1C539F;
+    font-family: "Roboto", serif;
+    font-weight: 700 !important;
+    padding-top: 10px;
 }
 
-h3 {
-    font-size: 1.8rem;
-    color: #B56576;
+.nav-content .logo-touch-target {
+    display: inline-flex;
+    height: 60%;
+    width: 350px;
 }
 
-p {
-    font-family: 'Quicksand',
-        sans-serif;
-    line-height: 1.5rem;
+.nav-content .nav-logo {
+    height: 60px;
+    margin: auto;
 }
 
-/* Introduction */
-
-.introduction {
+.nav-logo {
     display: flex;
-    height: 70vh;
-    background: white;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-.introduction-image>img {
-    width: 20rem;
-    border-radius: 50%;
-}
-
-.introduction-text>h1 {
-    font-size: 4rem;
-    letter-spacing: 0.15rem;
-    line-height: 5rem;
-}
-
-.introduction-text>p {
-    font-family: 'Parisienne',
-        cursive;
-    font-size: 2rem;
-    color: #E56B6F;
-}
-
-/* Box Border */
-.box-border {
-    margin: 0 5rem 3rem 5rem;
-    border-radius: 15px;
-    box-shadow: 5px 4px 6px 4px #e4e4e4;
-}
-
-/* About Yourself */
-.about-yourself {
-    display: grid;
-    height: 100%;
-    grid-template-columns: repeat(2, auto);
-    grid-column-gap: 5rem;
-}
-
-.about-yourself-title {
-    margin-left: 6rem;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    grid-column: span 2;
-}
-
-.about-yourself-description1 {
-    margin-left: 6rem;
-    margin-bottom: 3rem;
-}
-
-
-/* grid layout */
-.grid-layout {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-column-gap: 2rem;
+.nav-logo img {
+    width: 200px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -103,26 +53,7 @@ p {
         display: block;
         padding: 1rem 0;
     }
-}
 
-/* Education */
-#education {
-    height: 100%;
-}
-
-
-
-.education-header {
-    grid-column: span 2;
-    margin-left: 6rem;
-    margin-right: 6rem;
-    margin-top: 3rem;
-}
-
-.education-info {
-    margin-left: 6rem;
-    display: flex;
-    margin-bottom: 3rem;
 }
 
 .college {
@@ -148,13 +79,6 @@ p {
 .education-description {
     padding-right: 5rem;
 }
-
-
-.college img {
-    max-width: 20rem;
-    height: auto;
-}
-
 
 /* Professional Experience */
 #work-experience {

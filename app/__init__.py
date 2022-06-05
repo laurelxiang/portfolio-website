@@ -5,15 +5,13 @@ from dotenv import load_dotenv
 from app.data import header_info, about_info, images, workExperience
 import folium
 import pandas as pd
+
 load_dotenv()
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-
-    # folium_map = folium.Map(location=(6.1753924, 106.8271528))
-    # folium_map.save('templates/interactivemap.html')
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), header_info=header_info, about_info=about_info, images=images, workExperience=workExperience)
 
 

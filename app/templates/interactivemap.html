@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_a51cdbff26ab1da1ea5c59d80821925a {
+                #map_5fb2afc10f10eb86e8543ca4b647a1c3 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -35,13 +35,13 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_a51cdbff26ab1da1ea5c59d80821925a" ></div>
+            <div class="folium-map" id="map_5fb2afc10f10eb86e8543ca4b647a1c3" ></div>
         
 </body>
 <script>    
     
-            var map_a51cdbff26ab1da1ea5c59d80821925a = L.map(
-                "map_a51cdbff26ab1da1ea5c59d80821925a",
+            var map_5fb2afc10f10eb86e8543ca4b647a1c3 = L.map(
+                "map_5fb2afc10f10eb86e8543ca4b647a1c3",
                 {
                     center: [20.0, 16.0],
                     crs: L.CRS.EPSG3857,
@@ -57,19 +57,25 @@
 
         
     
-            var tile_layer_f6f45ffb413d11d0d26c606794fdbb48 = L.tileLayer(
+            var tile_layer_30b06a4356e03d173ef91de1be977438 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_a51cdbff26ab1da1ea5c59d80821925a);
+            ).addTo(map_5fb2afc10f10eb86e8543ca4b647a1c3);
         
     
-            var marker_b6d6114040e41a2d86c41011274128b2 = L.marker(
+            var marker_a4b481b7713b09fc5aebe7e4dba5a46b = L.marker(
                 [41.3874, 2.1686],
                 {}
-            ).addTo(map_a51cdbff26ab1da1ea5c59d80821925a);
+            ).addTo(map_5fb2afc10f10eb86e8543ca4b647a1c3);
         
     
-            marker_b6d6114040e41a2d86c41011274128b2.bindTooltip(
+            var icon_c19180eaeff6ab9a639a98320ade3f46 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "check", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a4b481b7713b09fc5aebe7e4dba5a46b.setIcon(icon_c19180eaeff6ab9a639a98320ade3f46);
+        
+    
+            marker_a4b481b7713b09fc5aebe7e4dba5a46b.bindTooltip(
                 `<div>
                      Barcelona, Spain
                  </div>`,
@@ -77,13 +83,19 @@
             );
         
     
-            var marker_2e712838d5fadb58459b34ce6ac362f8 = L.marker(
+            var marker_a9869b81f1fcdff3becc6c988d7f4269 = L.marker(
                 [48.8566, 2.3522],
                 {}
-            ).addTo(map_a51cdbff26ab1da1ea5c59d80821925a);
+            ).addTo(map_5fb2afc10f10eb86e8543ca4b647a1c3);
         
     
-            marker_2e712838d5fadb58459b34ce6ac362f8.bindTooltip(
+            var icon_eba51ef663015dc2cf7ece15d157a951 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "check", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a9869b81f1fcdff3becc6c988d7f4269.setIcon(icon_eba51ef663015dc2cf7ece15d157a951);
+        
+    
+            marker_a9869b81f1fcdff3becc6c988d7f4269.bindTooltip(
                 `<div>
                      Paris, France
                  </div>`,
@@ -91,13 +103,19 @@
             );
         
     
-            var marker_97cc87b3306c9a4eb88368c0b882a3ad = L.marker(
+            var marker_2f6363f2986408ac5af8e1cd9060e565 = L.marker(
                 [34.0522, -118.2437],
                 {}
-            ).addTo(map_a51cdbff26ab1da1ea5c59d80821925a);
+            ).addTo(map_5fb2afc10f10eb86e8543ca4b647a1c3);
         
     
-            marker_97cc87b3306c9a4eb88368c0b882a3ad.bindTooltip(
+            var icon_05d9f09b999de6063c4fc184c6b9a2c6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "check", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_2f6363f2986408ac5af8e1cd9060e565.setIcon(icon_05d9f09b999de6063c4fc184c6b9a2c6);
+        
+    
+            marker_2f6363f2986408ac5af8e1cd9060e565.bindTooltip(
                 `<div>
                      Los Angeles, California
                  </div>`,
@@ -105,13 +123,19 @@
             );
         
     
-            var marker_98729c4089ab62a4f01e1f585b20114b = L.marker(
+            var marker_d2d5f7734752911e6c6f2d41043dec1c = L.marker(
                 [51.2538, -85.3232],
                 {}
-            ).addTo(map_a51cdbff26ab1da1ea5c59d80821925a);
+            ).addTo(map_5fb2afc10f10eb86e8543ca4b647a1c3);
         
     
-            marker_98729c4089ab62a4f01e1f585b20114b.bindTooltip(
+            var icon_9a3d60dcbdb08e47d6ede8a34f5d38fd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "check", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d2d5f7734752911e6c6f2d41043dec1c.setIcon(icon_9a3d60dcbdb08e47d6ede8a34f5d38fd);
+        
+    
+            marker_d2d5f7734752911e6c6f2d41043dec1c.bindTooltip(
                 `<div>
                      Ontario, Canada
                  </div>`,
@@ -119,13 +143,19 @@
             );
         
     
-            var marker_261f0df994003dc47bb79f80ab6f319d = L.marker(
+            var marker_a092bcb39c33e35ade7df910e5348a36 = L.marker(
                 [23.1291, 113.2644],
                 {}
-            ).addTo(map_a51cdbff26ab1da1ea5c59d80821925a);
+            ).addTo(map_5fb2afc10f10eb86e8543ca4b647a1c3);
         
     
-            marker_261f0df994003dc47bb79f80ab6f319d.bindTooltip(
+            var icon_f5b6f06ffa66d00f691eb20bac63d10b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "check", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_a092bcb39c33e35ade7df910e5348a36.setIcon(icon_f5b6f06ffa66d00f691eb20bac63d10b);
+        
+    
+            marker_a092bcb39c33e35ade7df910e5348a36.bindTooltip(
                 `<div>
                      Guangzhou, China
                  </div>`,
@@ -133,13 +163,19 @@
             );
         
     
-            var marker_86a81a8de34152d4fab2fa56087890b2 = L.marker(
+            var marker_c83e88918452d32efd8142867ce6c8fc = L.marker(
                 [25.7617, -80.1918],
                 {}
-            ).addTo(map_a51cdbff26ab1da1ea5c59d80821925a);
+            ).addTo(map_5fb2afc10f10eb86e8543ca4b647a1c3);
         
     
-            marker_86a81a8de34152d4fab2fa56087890b2.bindTooltip(
+            var icon_927e29c05713b72cdc44ec0c099261d2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "check", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_c83e88918452d32efd8142867ce6c8fc.setIcon(icon_927e29c05713b72cdc44ec0c099261d2);
+        
+    
+            marker_c83e88918452d32efd8142867ce6c8fc.bindTooltip(
                 `<div>
                      Miami, Florida
                  </div>`,

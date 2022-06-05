@@ -5,7 +5,9 @@
 {% endblock %}
 
 {% block body %}
-<h1>Places I've Visited</h1>
-
-<iframe class="map" src="/interactivemap" width="80%" height="600px"></iframe>
+<h1 id="map-header">Places I've Visited</h1>
+<p id="map-description">Hover over the pinpoints to see what city and country I've vistied!</p>
+<div class="map-container">
+    <iframe class="map" src="/interactivemap" width="80%" height="600px"></iframe>
+</div>
 {% endblock %}

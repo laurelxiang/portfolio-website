@@ -98,9 +98,10 @@ p {
     grid-column-gap: 2rem;
 }
 
-@media screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
     .grid-layout {
         display: block;
+        padding: 1rem 0;
     }
 }
 
@@ -124,15 +125,33 @@ p {
     margin-bottom: 3rem;
 }
 
-@media screen and (max-width: 700px) {
+.education-info {
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.college {
+    margin-top: 1rem;
+    margin-left: none;
+    align-self: center;
+}
+
+@media screen and (max-width: 1000px) {
     .education-info {
         flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .college {
+        margin-top: 1rem;
+        margin-left: none;
+        align-self: center;
     }
 
 }
 
 .education-description {
-    padding-right: 10rem;
+    padding-right: 5rem;
 }
 
 
@@ -180,3 +199,24 @@ p {
 }
 
 /* Map Page */
+#map-header {
+    text-align: center;
+    padding: 3rem 5rem 0 5rem;
+    font-size: 3rem;
+    color: #B56576;
+}
+
+#map-description {
+    text-align: center;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+.map-container {
+    padding: 2rem 0;
+}
+
+.map {
+    margin: auto;
+    border: 3px solid rgb(40, 40, 40);
+}

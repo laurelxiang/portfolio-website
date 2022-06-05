@@ -6,19 +6,19 @@
 
 {% block body %}
 <div class="introduction">
-    <div class="introduction-text">
+    <div class="introduction-text" data-aos="fade-left" data-aos-delay="100" data-aos-mirror="true">
         <p>hello, nice to meet you</p>
         <h1>I'm {{header_info.name}}</h1>
     </div>
 
-    <div class="introduction-image">
+    <div class="introduction-image" data-aos="fade-right" data-aos-delay="100" data-aos-mirror="true">
 
-        <img src="/static/img/logo.jpg" alt="">
+        <img src={{header_info.img}} alt="">
     </div>
 
 </div>
 
-<div class="about-yourself box-border">
+<div class="about-yourself box-border" data-aos="fade-up" data-aos-delay="500">
     <div class="about-yourself-title">
         <h3>Let me tell you a little bit about myself...</h3>
     </div>

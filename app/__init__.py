@@ -1,5 +1,5 @@
 import os
-from turtle import fillcolor
+from turtle import color, fillcolor
 from flask import Flask, render_template, request, url_for
 from dotenv import load_dotenv
 from app.data import header_info, about_info, images, workExperience
@@ -30,7 +30,8 @@ def map():
     for _, place in places_visited.iterrows():
         folium.Marker(
             location=[place['latitude'], place['longitude']],
-            tooltip=place['City'] + ", " + place['Country']
+            tooltip=place['City'] + ", " + place['Country'],
+            icon=folium.Icon(color="red", icon='check', prefix='fa')
         ).add_to(folium_map)
 
     folium_map.save('app/templates/interactivemap.html')
@@ -60,5 +61,3 @@ def dated_url_for(endpoint, **values):
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-# %%

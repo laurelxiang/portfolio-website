@@ -9,13 +9,16 @@ load_dotenv()
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/home')
 def index():
 
     # folium_map = folium.Map(location=(6.1753924, 106.8271528))
     # folium_map.save('templates/interactivemap.html')
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), header_info=header_info, about_info=about_info, images=images, workExperience=workExperience)
 
+@app.route('/hobbies')
+def hobbies():
+    return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"))
 
 @app.route('/map')
 def map():

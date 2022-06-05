@@ -196,7 +196,7 @@ p {
 /* Map Page */
 #map-header {
     text-align: center;
-    padding: 3rem 5rem 0 5rem;
+    /* padding: 3rem 5rem 0 5rem; */
     font-size: 3rem;
     color: #B56576;
 }
@@ -214,4 +214,26 @@ p {
 .map {
     margin: auto;
     border: 3px solid rgb(40, 40, 40);
+}
+
+/* navbar */
+
+.navbar a{
+    font-family: 'Quicksand',
+        sans-serif !important;
+}
+
+.navbar .navbar-brand {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    text-align: center;
+  }
+
+nav {
+    border-bottom: solid;
+  }
+
+.navbar { 
+    margin-bottom : 10px !important; 
 }

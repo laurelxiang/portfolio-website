@@ -34,27 +34,27 @@ workExperience = [
 
 hobby_info = [
     {
-        "title": "Title1",
-        "description" : "Description1",
-        "img" : "/static/img/sbuiacs.jpeg",
-        "img_description" : "ImageDescription1",
+        "title": "Reading",
+        "description": "In my free time, I like to read fiction and mystery books. It's like a movie in your head.",
+        "img": "/static/img/the-stand-in-.jpeg",
+        "img_description": "The Stand-In by Lily Chu",
     },
     {
-        "title": "Title2",
-        "description" : "Description2",
-        "img" : "Image2",
-        "img_description" : "ImageDescription2",
+        "title": "Exercising",
+        "description": "Over quarantine, I started exercising and maintaining a healthy balance between school and personal life. I started utilizing the recreation center at school and enjoyed working out with my friends.",
+        "img": "/static/img/sburec.jpg",
+        "img_description": "Stony Brook Recreation Center",
     },
     {
         "title": "Title3",
-        "description" : "Description3",
-        "img" : "Image3",
-        "img_description" : "ImageDescription3",
+        "description": "Description3",
+        "img": "Image3",
+        "img_description": "ImageDescription3",
     },
     {
         "title": "Title4",
-        "description" : "Description4",
-        "img" : "Image4",
-        "img_description" : "ImageDescription4",
+        "description": "Description4",
+        "img": "Image4",
+        "img_description": "ImageDescription4",
     }
 ]

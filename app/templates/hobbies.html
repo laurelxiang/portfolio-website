@@ -1,14 +1,10 @@
-{% extends 'index.html' %} {% block content %}
+{% extends 'base.html' %}
 
-<p>{{hobbies_info.description}}</p>
+{% block head %}
 
-<div class="profile">
-    <div id="profile-picture" class="profile-picture">
-        <img src="./static/img/logo.jpg">
-    </div>
-    <h1>{{ title }}</h1>
-</div>
+{% endblock %}
 
-
+{% block body %}
+<h1>Hobbies</h1>
 
 {% endblock %}

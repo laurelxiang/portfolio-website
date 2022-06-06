@@ -31,3 +31,30 @@ workExperience = [
     }
 
 ]
+
+hobby_info = [
+    {
+        "title": "Title1",
+        "description" : "Description1",
+        "img" : "/static/img/sbuiacs.jpeg",
+        "img_description" : "ImageDescription1",
+    },
+    {
+        "title": "Title2",
+        "description" : "Description2",
+        "img" : "Image2",
+        "img_description" : "ImageDescription2",
+    },
+    {
+        "title": "Title3",
+        "description" : "Description3",
+        "img" : "Image3",
+        "img_description" : "ImageDescription3",
+    },
+    {
+        "title": "Title4",
+        "description" : "Description4",
+        "img" : "Image4",
+        "img_description" : "ImageDescription4",
+    }
+]

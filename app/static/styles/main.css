@@ -121,8 +121,6 @@ p {
     height: 100%;
 }
 
-
-
 .education-header {
     grid-column: span 2;
     margin-left: 6rem;
@@ -165,7 +163,6 @@ p {
     max-width: 20rem;
     height: auto;
 }
-
 
 /* Professional Experience */
 #work-experience {

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1a2d6895783839c0528dcdb76cb0a197 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_1a2d6895783839c0528dcdb76cb0a197" ></div>
+        
+</body>
+<script>    
+    
+            var map_1a2d6895783839c0528dcdb76cb0a197 = L.map(
+                "map_1a2d6895783839c0528dcdb76cb0a197",
+                {
+                    center: [20.0, 16.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: false,
+                    preferCanvas: false,
+                    scrollWheelZoom: false,
+                    dragging: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f71a793b773202c3da24300ca8dcada6 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1a2d6895783839c0528dcdb76cb0a197);
+        
+    
+            var marker_76f5ca4b080ed146d1e00d84dfedc3c5 = L.marker(
+                [41.3874, 2.1686],
+                {}
+            ).addTo(map_1a2d6895783839c0528dcdb76cb0a197);
+        
+    
+            var icon_7b0ee5b99a3d1a8bdebf383637556b4a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "check", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_76f5ca4b080ed146d1e00d84dfedc3c5.setIcon(icon_7b0ee5b99a3d1a8bdebf383637556b4a);
+        
+    
+            marker_76f5ca4b080ed146d1e00d84dfedc3c5.bindTooltip(
+                `<div>
+                     Barcelona, Spain
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0ea282e8912f4b9920138f9e28a6df96 = L.marker(
+                [48.8566, 2.3522],
+                {}
+            ).addTo(map_1a2d6895783839c0528dcdb76cb0a197);
+        
+    
+            var icon_5443e2aeb90a2f3be301a481d8e6ba04 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "check", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_0ea282e8912f4b9920138f9e28a6df96.setIcon(icon_5443e2aeb90a2f3be301a481d8e6ba04);
+        
+    
+            marker_0ea282e8912f4b9920138f9e28a6df96.bindTooltip(
+                `<div>
+                     Paris, France
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_627cf01a45348b06ba709acff001ec41 = L.marker(
+                [34.0522, -118.2437],
+                {}
+            ).addTo(map_1a2d6895783839c0528dcdb76cb0a197);
+        
+    
+            var icon_50be486f9cb99283c6af1867770a77cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "check", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_627cf01a45348b06ba709acff001ec41.setIcon(icon_50be486f9cb99283c6af1867770a77cf);
+        
+    
+            marker_627cf01a45348b06ba709acff001ec41.bindTooltip(
+                `<div>
+                     Los Angeles, California
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_18ae5a05440178a03f3cec520ef89229 = L.marker(
+                [51.2538, -85.3232],
+                {}
+            ).addTo(map_1a2d6895783839c0528dcdb76cb0a197);
+        
+    
+            var icon_263eacf3c88f505862d7287be20c4eef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "check", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_18ae5a05440178a03f3cec520ef89229.setIcon(icon_263eacf3c88f505862d7287be20c4eef);
+        
+    
+            marker_18ae5a05440178a03f3cec520ef89229.bindTooltip(
+                `<div>
+                     Ontario, Canada
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_242ff5894a0ea6cfbe199a1b19fa63c7 = L.marker(
+                [23.1291, 113.2644],
+                {}
+            ).addTo(map_1a2d6895783839c0528dcdb76cb0a197);
+        
+    
+            var icon_aa122c825c35f6ab330960106414b6d4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "check", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_242ff5894a0ea6cfbe199a1b19fa63c7.setIcon(icon_aa122c825c35f6ab330960106414b6d4);
+        
+    
+            marker_242ff5894a0ea6cfbe199a1b19fa63c7.bindTooltip(
+                `<div>
+                     Guangzhou, China
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_88d18e7884566ee27448426729f47f5c = L.marker(
+                [25.7617, -80.1918],
+                {}
+            ).addTo(map_1a2d6895783839c0528dcdb76cb0a197);
+        
+    
+            var icon_c4649da12a95c3640f16613f692ad673 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "check", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_88d18e7884566ee27448426729f47f5c.setIcon(icon_c4649da12a95c3640f16613f692ad673);
+        
+    
+            marker_88d18e7884566ee27448426729f47f5c.bindTooltip(
+                `<div>
+                     Miami, Florida
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>

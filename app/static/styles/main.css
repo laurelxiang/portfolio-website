@@ -65,9 +65,20 @@ p {
 
 /* Box Border */
 .box-border {
+    margin: 0 5rem 3rem 5rem;
+    border-radius: 15px;
+    box-shadow: 5px 4px 6px 4px #e4e4e4;
+}
+
+.box-border2 {
     margin: 0 1rem 3rem 1rem;
     border-radius: 15px;
     box-shadow: 5px 4px 6px 4px #e4e4e4;
+}
+
+.margin-change {
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
 /* About Yourself */

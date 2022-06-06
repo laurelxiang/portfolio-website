@@ -2,8 +2,7 @@ import os
 from turtle import color, fillcolor
 from flask import Flask, render_template, request, url_for
 from dotenv import load_dotenv
-from app.data import hobbies
-from app.data import header_info, about_info, images, workExperience
+from app.data import header_info, about_info, images, workExperience, hobby_info
 import folium
 import pandas as pd
 
@@ -13,11 +12,11 @@ app = Flask(__name__)
 
 @app.route('/home')
 def index():
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
+    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), header_info=header_info, about_info=about_info, images=images, workExperience=workExperience)
 
 @app.route('/hobbies')
-def index():
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), header_info=header_info, about_info=about_info, images=images, workExperience=workExperience)
+def hobbies():
+    return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"), hobby_info = hobby_info)
 
 @app.route('/map')
 def map():

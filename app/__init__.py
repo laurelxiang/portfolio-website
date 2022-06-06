@@ -14,11 +14,13 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"), header_info=header_info, about_info=about_info, images=images, workExperience=workExperience)
 
+
 @app.route('/hobbies')
 def hobbies():
     return render_template('hobbies.html', title="Hobbies", url=os.getenv("URL"), hobby_info = hobby_info)
 
-@app.route('/map')
+
+@ app.route('/map')
 def map():
     folium_map = folium.Map(
         location=[20, 16],

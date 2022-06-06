@@ -53,7 +53,7 @@ hobby_info = [
     },
     {
         "title": "Biking",
-        "description" : "I love going on long bike rides around New York City, especially on the Hudson Greenway.",
+        "description" : "I love going on long bike rides around New York City, especially on the Hudson Greenway. I also really enjoy biking around Brooklyn. One of my goals for this summer is to bike along every bridge out of Manhattan!",
         "img" : "/static/img/citibike.jpeg",
         "img_description" : "Citibike",
     }

@@ -279,23 +279,14 @@ nav {
     width: 200px;
 }
 
-.hobbies-header {
-    grid-column: span 2;
-    margin-left: 6rem;
-    margin-right: 6rem;
-    margin-top: 3rem;
-}
-
 .hobbies {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     height: fit-content;
-    margin: 0 6rem 3rem 6rem;
+    margin: 3rem 2rem 3rem 4rem;
 }
-
-
 
 .hobbies-image {
     height: fit-content;

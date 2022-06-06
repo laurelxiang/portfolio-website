@@ -46,15 +46,15 @@ hobby_info = [
         "img_description": "Stony Brook Recreation Center",
     },
     {
-        "title": "Title3",
-        "description": "Description3",
-        "img": "Image3",
-        "img_description": "ImageDescription3",
+        "title": "Reinforcement Learning",
+        "description" : "I came upon the topic of reinforcement learning during my coursework. The idea of agent-based learning was really appealing to me, especially in the context of mini games. I'm proud of my capstone project for this class, which was a Markov Decision Process (MDP) built on a series of grocery stores to train an agent to budget while at the grocery store.",
+        "img" : "/static/img/mdp.png",
+        "img_description" : "MDP of grocery store agent simulation",
     },
     {
-        "title": "Title4",
-        "description": "Description4",
-        "img": "Image4",
-        "img_description": "ImageDescription4",
+        "title": "Biking",
+        "description" : "I love going on long bike rides around New York City, especially on the Hudson Greenway.",
+        "img" : "/static/img/citibike.jpeg",
+        "img_description" : "Citibike",
     }
 ]

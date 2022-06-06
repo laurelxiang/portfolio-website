@@ -5,6 +5,30 @@
 {% endblock %}
 
 {% block body %}
-<h1>Hobbies</h1>
+<div class="hobbies-main-title-box">
+    <div class="grid-layout box-border" id="hobbies" data-aos="fade-up" data-aos-delay="10">
+        <div class="hobbies-main-title">
+            <h1>My Hobbies</h1>
+        </div>
+    </div>
+</div>
+
+{% for hobby in hobby_info %}
+<div class="grid-layout box-border" id="hobbies" data-aos="fade-up" data-aos-delay="50">
+    <div class="hobbies-header">
+        <h3>{{hobby.title}}</h3>
+    </div>
+    <div class="hobbies">
+        <div class="hobbies-title">
+            <p>{{hobby.description}}</p>
+        </div>
+    </div>
+
+    <div class="hobbies-image">
+        <img src="{{hobby.img}}" alt="Picture of Hobby">
+        <p>{{hobby.img_description}}</p>
+    </div>
+</div>
+{% endfor %}
 
 {% endblock %}

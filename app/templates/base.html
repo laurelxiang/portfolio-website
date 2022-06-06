@@ -12,12 +12,13 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- nav bar -->
-    <nav class="navbar sticky-top bg-white">
-        <div class="container">
+    <nav class="navbar sticky-top bg-white d-flex justify-content-left">
+        <a class="navbar-brand" href="/home"> <img src="/static/img/Logo.png" alt="" style="margin-left: 5rem"> </a>
+        <form class="form-inline" style="margin-right: 5rem">
             <a class="navbar-brand" href="/home">Home</a>
             <a class="navbar-brand" href="/map">Map</a>
             <a class="navbar-brand" href="/hobbies">Hobbies</a>
-        </div>
+        </form>
     </nav>
 
     {% block head %}{% endblock %}

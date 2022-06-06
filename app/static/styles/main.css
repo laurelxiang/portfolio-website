@@ -243,6 +243,16 @@ p {
 
 /* navbar */
 
+.navbar {
+    padding: 0 3rem 0 3rem;
+}
+
+.navbar img {
+    max-width: 4rem;
+    max-height: 4rem;
+    height: auto;
+}
+
 .navbar a {
     font-family: 'Quicksand',
         sans-serif !important;

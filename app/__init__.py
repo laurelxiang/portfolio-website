@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, request, url_for
-# from turtle import color, fillcolor
+from peewee import *
 from dotenv import load_dotenv
 from app.data import header_info, about_info, images, workExperience, hobby_info
 import folium
@@ -10,6 +10,9 @@ import pandas as pd
 load_dotenv()
 app = Flask(__name__)
 
+mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"), user=os.getenv("MYSQL_USER"), password=os.getenv("MYSQL_PASSWORD"), host=os.getenv("MYSQL_HOST"), port=3306)
+
+print(mydb)
 
 @app.route('/home')
 def index():

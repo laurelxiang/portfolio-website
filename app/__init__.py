@@ -92,6 +92,9 @@ def dated_url_for(endpoint, **values):
             values['q'] = int(os.stat(file_path).st_mtime)
     return url_for(endpoint, **values)
 
+@app.route("/timeline")
+def timeline():
+    return render_template('timeline.html', title="Timeline")
 
 if __name__ == "__main__":
     app.run(debug=True)

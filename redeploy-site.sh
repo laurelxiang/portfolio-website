@@ -8,7 +8,7 @@ python -m venv python3-virtualenv
 source python3-virtualenv/bin/activate
 pip3 install -U pip #for bug fix when downloading cryptography library
 pip install -r requirements.txt
-sytemctl daemon-reload
+systemctl daemon-reload
 systemctl restart myportfolio
 
 # #automatic deployment script using tmux

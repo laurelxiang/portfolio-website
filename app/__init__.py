@@ -14,6 +14,19 @@ app = Flask(__name__)
 
 mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"), user=os.getenv("MYSQL_USER"), password=os.getenv("MYSQL_PASSWORD"), host=os.getenv("MYSQL_HOST"), port=3306)
 
+# set the mydb variable to an in-memory sqlite database during testing
+print(os.getenv("TESTING"))
+if os.getenv("TESTING") == "true":
+    print("Running in test mode")
+    mydb = SqliteDatabase("file:memory?mode=memory&cache=shared", uri=True)
+else:
+    mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
+        user=os.getenv("MYSQL_USER"),
+        password=os.getenv("MYSQL_PASSWORD"),
+        host=os.getenv("MYSQL_HOST"),
+        port=3306
+    )
+
 print(mydb)
 
 class TimelinePost(Model):
@@ -27,19 +40,6 @@ class TimelinePost(Model):
 
 mydb.connect()
 mydb.create_tables([TimelinePost])
-
-@app.route('/api/timeline_post',methods=['POST'])
-def post_time_line_post():
-    name=request.form['name']
-    email=request.form['email']
-    content=request.form['content']
-    timeline_post=TimelinePost.create(name=name,email=email,content=content)
-
-    return model_to_dict(timeline_post)
-
-@app.route('/api/timeline_post',methods=['GET'])
-def get_time_line_post():
-    return {'timeline_post': [model_to_dict(p) for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())]}
 
 @app.route('/home')
 def index():
@@ -95,6 +95,27 @@ def dated_url_for(endpoint, **values):
 @app.route("/timeline")
 def timeline():
     return render_template('timeline.html', title="Timeline")
+
+@app.route('/api/timeline_post', methods=['POST'])
+def post_time_line_post():
+    name = request.form.get('name', False)
+    email = request.form.get('email', False)
+    content = request.form.get('content', False)
+
+    if name == "False" or name == 'False' or len(name) == 0:
+        return "Invalid name", 400
+    if (len(email) == 0 or "@" not in email):
+        return "Invalid email", 400
+    if content == False or content == "" or len(content) == 0:  
+        return "Invalid content", 400
+
+    timeline_post = TimelinePost.create(name=name, email=email, content=content)
+    return model_to_dict(timeline_post)
+
+@app.route('/api/timeline_post',methods=['GET'])
+def get_time_line_post():
+    return {'timeline_post': [model_to_dict(p) for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())]}
+
 
 if __name__ == "__main__":
     app.run(debug=True)

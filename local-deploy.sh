@@ -9,7 +9,7 @@ then
     flask run
 elif [ $1 == 0 ]
 then
-    flask run
+    echo "virtual env set up! flask ready to run"
 elif [ $1 == 1 ]
 then
     tmux new -d -s flask-host-session

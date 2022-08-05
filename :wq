@@ -1,0 +1,14 @@
+[0;1;32m●[0m myportfolio.service - Serve Portfolio Site
+   Loaded: loaded (/etc/systemd/system/myportfolio.service; disabled; vendor preset: disabled)
+   Active: [0;1;32mactive (running)[0m since Thu 2022-08-04 19:36:50 UTC; 902ms ago
+ Main PID: 83922 (python)
+    Tasks: 1 (limit: 4676)
+   Memory: 25.6M
+   CGroup: /system.slice/myportfolio.service
+           └─83922 /root/portfolio-website/python3-virtualenv/bin/python /root/portfolio-website/python3-virtualenv/bin/flask run --host=0.0.0.0
+
+Aug 04 19:36:50 laurel-xiang systemd[1]: Started Serve Portfolio Site.
+Aug 04 19:36:51 laurel-xiang python[83922]:  * Environment: production
+Aug 04 19:36:51 laurel-xiang python[83922]:    WARNING: This is a development server. Do not use it in a production deployment.
+Aug 04 19:36:51 laurel-xiang python[83922]:    Use a production WSGI server instead.
+Aug 04 19:36:51 laurel-xiang python[83922]:  * Debug mode: off

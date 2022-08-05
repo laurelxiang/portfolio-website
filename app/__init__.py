@@ -4,7 +4,6 @@ from peewee import *
 from dotenv import load_dotenv
 from app.data import header_info, about_info, images, workExperience, hobby_info
 import folium
-from turtle import *
 import pandas as pd
 import datetime
 from playhouse.shortcuts import model_to_dict

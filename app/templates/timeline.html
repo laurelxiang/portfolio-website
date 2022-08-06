@@ -6,7 +6,7 @@
 
 {% block body %}
 <h3>Message Request Form</h3>
-    <form id="form">
+    <form id="form" action="/api/timeline_post" target="/timeline" method="POST">
         <input class="input-box" type="text" id="name" name="name" placeholder="Name">
         <input class="input-box" type="email" id="email" name="email" placeholder="Email">
         <textarea class="input-box" name="content" id="content" cols="50" rows="10" placeholder="Content"></textarea>

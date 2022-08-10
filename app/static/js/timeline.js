@@ -9,11 +9,11 @@ fetch('/api/timeline_post')
 });
 
 appendData = data => {
-const container = document.querySelector("#post-data");
+const container = document.querySelector("#publish");
 
-data.slice().reverse().forEach(timeline_post => {
+data.slice().reverse().forEach(tpost => {
     const post = document.createElement('p');
-    post.innerHTML = `Name: ${timeline_post.name} Email: ${timeline_post.email}  Created at: ${timeline_post.created_at} <br> Content: ${timeline_post.content}`;
+    post.innerHTML = `Name: ${tpost.name} Email: ${tpost.email}  Created at: ${tpost.created_at} <br> Content: ${tpost.content}`;
     container.append(post);
 })
 }
@@ -21,35 +21,35 @@ data.slice().reverse().forEach(timeline_post => {
 //posting data
 const form = document.getElementById('form');
 form.addEventListener('submit', function (e) {
-e.preventDefault();
+    e.preventDefault();
 
-const payload = new FormData(form);
-console.log([...payload]);
+    const payload = new FormData(form);
+    console.log([...payload]);
 
-// post the payload using fetch
-fetch('/api/timeline_post', {
-    method: 'POST',
-    body: payload,
-})
-    .then(
-        res => res.json()
-    )
-    .then(
-        data => {
-            console.log(data);
-            fetch('/api/timeline_post')
-                .then(
-                    response => response.json())
-                .then(
-                    data => {
-                        const container = document.querySelector("#post-data");
-                        const post = document.createElement('p');
-                        post.innerHTML = `Name: ${data.timeline_posts[0].name} Email: ${data.timeline_posts[0].email}  Created at: ${data.timeline_posts[0].created_at} <br> Content: ${data.timeline_posts[0].content}`;
-                        container.append(post);
-                    }
-                ).catch(
-                    err => {console.log(err);
-                });
-        }
-    )
-})
+    fetch('/api/timeline_post', {
+        method: 'POST',
+        body: payload,
+    })
+        .then(
+            res => res.json()
+        )
+        .then(
+            data => {
+                console.log(data);
+                fetch('/api/timeline_post')
+                    .then(
+                        response => response.json())
+                    .then(
+                        data => {
+                            const container = document.querySelector("#publish");
+                            const post = document.createElement('p');
+                            post.innerHTML = `Name: ${data.timeline_posts[0].name} Email: ${data.timeline_posts[0].email}  Created at: ${data.timeline_posts[0].created_at} <br> Content: ${data.timeline_posts[0].content}`;
+                            container.append(post);
+                        }
+                    ).catch(
+                        err => {console.log(err);
+                    });
+            }
+        )
+    }
+)

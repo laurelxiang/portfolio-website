@@ -11,15 +11,15 @@
 {% endblock %}
 
 {% block body %}
-<h3>Message Request Form</h3>
+<h3> Message Form</h3>
 <form id="form">
-    <input type="text" id="name" name="name" placeholder="Name">
-    <input type="email" id="email" name="email" placeholder="Email">
-    <textarea name="content" id="content" cols="60" rows="5" placeholder="Message"></textarea>
+    <input class="input-box" type="text" id="name" name="name" placeholder="Name">
+    <input class="input-box" type="email" id="email" name="email" placeholder="Email">
+    <textarea class="input-box" name="content" id="content" cols="50" rows="10" placeholder="Message"></textarea>
     <button id="submit-button" type="submit" value="Submit">Submit</button>
 </form>
 
-<h3>Timeline Post</h3>
-<div id="posts"></div>
+<h3>Message Timeline</h3>
+<div id="post-data"></div>
 
 {% endblock %}

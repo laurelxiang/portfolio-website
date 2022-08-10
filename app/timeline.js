@@ -1,12 +1,39 @@
 //retrieve data
-fetch('/api/timeline_post')
-    .then(response => 
-        response.json())
-    .then(data =>
-        appendData(data.timeline_posts)
-    ).catch(err => {
-        console.log(err);
-    });
+fetch('/api/timeline_post').then(response => response.json())
+        .then(data =>
+            appendData(data.timeline_post)
+        ).catch(err => {
+            console.log(err);
+        });
+
+    appendData = data => {
+        const container = document.querySelector("#post-data");
+
+        data.forEach(timeline_post => {
+            const post = document.createElement('p');
+            post.innerHTML = `Name: ${timeline_post.name} <br> Email: ${timeline_post.email} <br> Content: ${timeline_post.content} <br> Created at: ${timeline_post.created_at}`;
+            container.append(post);
+        })
+    }
+
+
+// fetch('/api/timeline_post')
+//     .then(function (response) {
+//         return response.json();
+//     })
+//     .then(function (data) {
+//         appendData(data);
+//     })
+//     .catch(function (err) {
+//         console.log('error: ' + err);
+//     });
+    // .then(response => 
+    //     response.json())
+    // .then(data =>
+    //     appendData(data.timeline_posts)
+    // ).catch(err => {
+    //     console.log(err);
+    // });
 
 // appendData = data => {
 //     const container = document.querySelector("#post-data");
@@ -18,14 +45,15 @@ fetch('/api/timeline_post')
 //     })
 // }
 
-function appendData(data) {
-    var mainContainer = document.getElementById("post-data");
-    for (var i = 0; i < data.length; i++) {
-      var div = document.createElement("div");
-      div.innerHTML = 'Name: ' + data[i].name + ' Email:' + data[i].email + ' Content:' + data[i].content + ' Created at:' + data[i].created_at;
-      mainContainer.appendChild(div);
-    }
-  }
+// function appendData(data) {
+//     var mainContainer = document.getElementById("post-data");
+//     data = data.timeline_posts
+//     for (var i = 0; i < data.length; i++) {
+//       var div = document.createElement("div");
+//       div.innerHTML = 'Name: ' + data[i].name + ' Email:' + data[i].email + ' Content:' + data[i].content + ' Created at:' + data[i].created_at;
+//       mainContainer.appendChild(div);
+//     }
+//   }
 
 //post data
 const form = document.getElementById('form');

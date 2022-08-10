@@ -21,8 +21,8 @@ class AppTestCase(unittest.TestCase):
         assert response.status_code == 200
         assert response.is_json
         json = response.get_json()
-        assert "timeline_post" in json
-        assert len(json["timeline_post"]) == 0
+        assert "timeline_posts" in json
+        assert len(json["timeline_posts"]) == 0
 
         #post
         response = self.client.post('api/timeline_post',
@@ -44,8 +44,8 @@ class AppTestCase(unittest.TestCase):
         assert response.status_code == 200
         assert response.is_json
         json = response.get_json()
-        assert "timeline_post" in json
-        assert len(json["timeline_post"]) == 1
+        assert "timeline_posts" in json
+        assert len(json["timeline_posts"]) == 1
 
     def test_malformed_timeline_post(self):
         # POST request missing name

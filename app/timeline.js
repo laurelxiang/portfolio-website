@@ -1,33 +1,50 @@
-const form = document.getElementById('form');
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
+const posts = document.querySelector('#posts');
 
-        const payload = new FormData(form);
-        console.log([...payload]);
+// fetch timeline post data from api
+const getPosts = () => {
+    fetch('/api/timeline_post')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            const posts_data = data['timeline_posts']
+            const html = posts_data.map(post2html).join('\n');
+            posts.innerHTML = html;
+        }
+        );
+    
+}
 
-        // post the payload using fetch
-        fetch('/api/timeline_post', {
-            method: 'POST',
-            body: payload,
-        })
-            .then(res => res.json())
-            .then(data => console.log(data))
+// prints post
+const post2html = (post) =>{
+    return `
+        <li>Name: ${post['name']},
+            Email: ${post['email']}, 
+            Content: ${post['content']}</il>
+        `
+}
+
+getPosts();
+
+const form = document.querySelector('#form');
+ 
+form.addEventListener('submit', function(e) {
+    console.log('listening for form data')
+    // Prevent default behavior:
+    e.preventDefault();
+    // Create new FormData object:
+    const formData = new FormData(form);
+    console.log(formData)
+    // Convert formData object to URL-encoded string:
+    const payload = new URLSearchParams(formData);
+    console.log(payload)
+    // Post the payload using Fetch:
+    fetch('/api/timeline_post', {
+        method: 'POST',
+        body: payload,
     })
-
-
-    fetch('/api/timeline_post').then(response => response.json())
-        .then(data =>
-            appendData(data.timeline_posts)
-        ).catch(err => {
-            console.log(err);
-        });
-
-    appendData = data => {
-        const container = document.querySelector("#post-data");
-
-        data.forEach(timeline_post => {
-            const post = document.createElement('p');
-            post.innerHTML = `Name: ${timeline_post.name} <br> Email: ${timeline_post.email} <br> Content: ${timeline_post.content} <br> Created at: ${timeline_post.created_at}`;
-            container.append(post);
-        })
-    }
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+        getPosts();
+    })
+})

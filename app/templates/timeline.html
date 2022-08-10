@@ -35,7 +35,7 @@
 
         data.slice().reverse().forEach(timeline_post => {
             const post = document.createElement('p');
-            post.innerHTML = `Name: ${timeline_post.name} \t Email: ${timeline_post.email}  \t Created at: ${timeline_post.created_at} <br> Content: ${timeline_post.content}`;
+            post.innerHTML = `Name: ${timeline_post.name} Email: ${timeline_post.email}  Created at: ${timeline_post.created_at} <br> Content: ${timeline_post.content}`;
             container.append(post);
         })
     }
@@ -66,7 +66,7 @@
                             data => {
                                 const container = document.querySelector("#post-data");
                                 const post = document.createElement('p');
-                                post.innerHTML = `Name: ${data.timeline_posts[0].name} \t Email: ${data.timeline_posts[0].email}  \t Created at: ${data.timeline_posts[0].created_at} <br> Content: ${data.timeline_posts[0].content}`;
+                                post.innerHTML = `Name: ${data.timeline_posts[0].name} Email: ${data.timeline_posts[0].email}  Created at: ${data.timeline_posts[0].created_at} <br> Content: ${data.timeline_posts[0].content}`;
                                 container.append(post);
                             }
                         ).catch(

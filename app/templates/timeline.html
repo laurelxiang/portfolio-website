@@ -5,6 +5,13 @@
 {% endblock %}
 
 {% block body %}
+
+{% block javascript %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="module" src="../timeline.js"></script>
+
+{% endblock %}
+
 <h3>Submit Message Here</h3>
 
 <form id="form">
@@ -16,11 +23,5 @@
 
 <h3>Timeline Posts</h3>
 <div id="post-data"></div>
-
-{% block javascript %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="../timeline.js"></script>
-
-{% endblock %}
 
 {% endblock %}

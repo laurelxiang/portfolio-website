@@ -5,21 +5,42 @@
 {% endblock %}
 
 {% block body %}
-<h3 id="message-title">Message Request Form</h3>
+<h3>Submit Message Here</h3>
 
 <form id="form">
     <input class="input-box" type="text" id="name" name="name" placeholder="Name">
     <input class="input-box" type="email" id="email" name="email" placeholder="Email">
     <textarea class="input-box" name="content" id="content" cols="50" rows="10" placeholder="Message"></textarea>
-    <button id="submit-button" type="submit" value="Submit">Send Message</button>
+    <button id="submit-button" type="submit" value="Submit">Submit</button>
 </form>
 
+<h3>Timeline Posts</h3>
 <div id="post-data"></div>
 
 {% block javascript %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script class="hide">
+    //fetching data
+    fetch('/api/timeline_post')
+        .then(
+            response => response.json())
+        .then(
+            data => appendData(data.timeline_posts)
+        ).catch(
+            err => {console.log(err);
+        });
 
+    appendData = data => {
+        const container = document.querySelector("#post-data");
+
+        data.slice().reverse().forEach(timeline_post => {
+            const post = document.createElement('p');
+            post.innerHTML = `Name: ${timeline_post.name} <br> Email: ${timeline_post.email} <br> Content: ${timeline_post.content} <br> Created at: ${timeline_post.created_at}`;
+            container.append(post);
+        })
+    }
+
+    //posting data
     const form = document.getElementById('form');
     form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -36,26 +57,20 @@
                 res => res.json()
             
             )
-            .then(data => console.log(data))
+            .then(
+                data => {
+                    console.log(data);
+                    fetch('/api/timeline_post')
+                        .then(
+                            response => response.json())
+                        .then(
+                            data => appendData(data.timeline_posts)
+                        ).catch(
+                            err => {console.log(err);
+                        });
+                }
+            )
     })
-
-
-    fetch('/api/timeline_post').then(response => response.json())
-        .then(data =>
-            appendData(data.timeline_posts)
-        ).catch(err => {
-            console.log(err);
-        });
-
-    appendData = data => {
-        const container = document.querySelector("#post-data");
-
-        data.slice().reverse().forEach(timeline_post => {
-            const post = document.createElement('p');
-            post.innerHTML = `Name: ${timeline_post.name} <br> Email: ${timeline_post.email} <br> Content: ${timeline_post.content} <br> Created at: ${timeline_post.created_at}`;
-            container.append(post);
-        })
-    }
 
 </script>
 

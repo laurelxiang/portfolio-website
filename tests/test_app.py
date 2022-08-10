@@ -11,8 +11,8 @@ class AppTestCase(unittest.TestCase):
         response = self.client.get("/home")
         assert response.status_code == 200
         html = response.get_data(as_text=True)
-        assert "<h1>I'm Fanny Li</h1>" in html
-        assert "<p>I am an aspiring Web Developer and UX/UI Designer. A little background information... I was born and raised in Brooklyn, New York. I enjoy working on web development projects and I hope to learn more through my internships and other experiences. I also enjoy programming and designing mobile applications.</p>" in html
+        assert "<h1>I'm Laurel Xiang</h1>" in html
+        # assert "<p>I am an aspiring Web Developer and UX/UI Designer. A little background information... I was born and raised in Brooklyn, New York. I enjoy working on web development projects and I hope to learn more through my internships and other experiences. I also enjoy programming and designing mobile applications.</p>" in html
 
 
     def test_timeline(self):

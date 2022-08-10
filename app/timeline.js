@@ -1,7 +1,7 @@
 //retrieve data
 fetch('/api/timeline_post').then(response => response.json())
         .then(data =>
-            appendData(data.timeline_post)
+            appendData(data.timeline_posts)
         ).catch(err => {
             console.log(err);
         });

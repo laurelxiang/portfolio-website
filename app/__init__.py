@@ -91,10 +91,6 @@ def dated_url_for(endpoint, **values):
             values['q'] = int(os.stat(file_path).st_mtime)
     return url_for(endpoint, **values)
 
-@app.route("/timeline")
-def timeline():
-    return render_template('timeline.html', title="Timeline")
-
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
     name = request.form.get('name', False)
@@ -113,8 +109,11 @@ def post_time_line_post():
 
 @app.route('/api/timeline_post',methods=['GET'])
 def get_time_line_post():
-    return {'timeline_post': [model_to_dict(p) for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())]}
+    return {'timeline_posts': [model_to_dict(p) for p in TimelinePost.select().order_by(TimelinePost.created_at.desc())]}
 
+@app.route("/timeline")
+def timeline():
+    return render_template('timeline.html', title="Timeline")
 
 if __name__ == "__main__":
     app.run(debug=True)

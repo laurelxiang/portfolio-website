@@ -35,7 +35,7 @@
 
         data.slice().reverse().forEach(timeline_post => {
             const post = document.createElement('p');
-            post.innerHTML = `Name: ${timeline_posts.name} \t Email: ${timeline_posts.email}  \t Created at: ${timeline_posts.created_at} <br> Content: ${timeline_posts.content}`;
+            post.innerHTML = `Name: ${timeline_post.name} \t Email: ${timeline_post.email}  \t Created at: ${timeline_post.created_at} <br> Content: ${timeline_post.content}`;
             container.append(post);
         })
     }

@@ -21,7 +21,7 @@
 {% block javascript %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script class="hide">
-    //fetching data
+    //publishing data
     fetch('/api/timeline_post')
     .then(
         response => response.json())
@@ -41,7 +41,7 @@
     })
     }
 
-    //posting data
+    //posting data and publishing it live
     const form = document.getElementById('form');
     form.addEventListener('submit', function (e) {
         e.preventDefault();
